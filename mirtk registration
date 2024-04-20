@@ -1,0 +1,11 @@
+# mirtk registration commands
+
+cd dti_outputs
+
+mrconvert b0.mif b0.nii
+
+bet b0.nii bet_b0.nii -m -f 0.25
+
+mirtk register -image bet_b0.nii.gz /media/mm/Mahdi-2022/Laxman_PD_Project/Christian_Processing_Complete/bet_mni.nii -dofout transfomation.txt -output r_mni.nii
+
+mirtk transform-image /media/mm/Mahdi-2022/Laxman_PD_Project/Christian_Processing_Complete/networks_ROIs.nii r_networks_ROI.nii -target bet_b0.nii.gz -dofin transfomation.txt -interp NN
