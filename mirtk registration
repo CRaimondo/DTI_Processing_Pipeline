@@ -1,4 +1,6 @@
 # mirtk registration commands
+# ensure bet_mni.nii (same for all pts) and network_ROIs.nii (for networks but can also use the visual or gait one) are in the patient folder
+# r_mni.nii and r_networks_ROI.nii are created 
 
 cd dti_outputs
 
