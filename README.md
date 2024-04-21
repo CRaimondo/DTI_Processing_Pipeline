@@ -2,6 +2,9 @@
 
 This repository serves as a collection of code, scripts, and notes for DTI processing, constituting a pipeline that can take an MRI DICOM  all the way to beautifully denoised pre-processed DTI images (and beyond). 
 
+!(Picture1.svg)
+
+
 ## Contents Contained in this repo (running list):
 
 ### (1) DTI Processing Pipeline Jupyter Notebook 
