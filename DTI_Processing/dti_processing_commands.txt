@@ -1,0 +1,35 @@
+## Command line version -- (final version that was used to convert to python script)
+# Command Line Commands:
+
+cd /Volumes/CDR1TB/dwi_processing_test_cmdline/Manzo_Peter_DTI_test
+
+## Command line version -- final version need to convert to python script
+cd /Volumes/CDR1TB/dwi_processing_test_cmdline/Moses_Meghan/Moses_Meghan_DTI
+
+# Convert dti.nii to mrtrix format (creates dti.mif)
+mrconvert -fslgrad bvec.bvec bval.bval dti.nii dti.mif -force
+
+# Denoise and view output residual
+dwidenoise dti.mif dti_denoise.mif -noise noise.mif -force
+mrcalc dti.mif dti_denoise.mif -subtract residual.mif -force
+mrview residual.mif
+
+# Extract b0.nii file (creates b0.nii)
+dwiextract -bzero dti_denoise.mif b0.mif -force
+
+# Pre-process
+dwifslpreproc dti_denoise.mif dti_denoise_preproc.mif -nocleanup -rpe_none -pe_dir AP -eddy_options " --slm=linear --data_is_shelled" -force
+
+mrconvert dti_denoise_preproc.mif dti_denoise_preproc.nii -force
+
+# N4bias correction
+dwibiascorrect ants dti_denoise_preproc.mif dti_denoise_preproc_unbiased.mif -bias bias.mif -force
+mrview dti_denoise_preproc_unbiased.mif -overlay.load dti.mif
+mrconvert dti_denoise_preproc_unbiased.mif dti_denoise_preproc_unbiased.nii -force
+
+# Create brain mask
+dwi2mask dti_denoise_preproc_unbiased.mif mask.mif -force
+mrconvert mask.mif mask.nii -force
+
+# Fit DTI tensors using dti_denoise_preproc_unbiased.nii, mask.nii, bvec & bval (creates nii.gz files of FA,MD,MO,S0,L1,L2,L3,V1,V2,V3)
+dtifit -k dti_denoise_preproc_unbiased.nii -o m -m mask.nii -r bvec.bvec -b bval.bval
