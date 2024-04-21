@@ -1,5 +1,11 @@
-# DTI Processing Pipeline
+## DTI Processing Pipeline
 
-Run from Jupyter Notebook by changing base path directory. 
+This repository serves as a collection of code, scripts, and notes for DTI processing, constituting a pipeline that can take an MRI DICOM  all the way to beautifully denoised pre-processed DTI images (and beyond). 
 
-Ensure bval.bval, bvec.bvec, dti.nii files are in patient folder
+(1) For DTI processing of NIFTI files: 
+Run from Jupyter Notebook and change base path directory to your own.  
+Required Starting files: bval.bval, bvec.bvec, dti.nii files are in each patient folder.
+
+(2) Registration 
+Run from command line
+
