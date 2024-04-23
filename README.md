@@ -1,6 +1,6 @@
 # **DTI Processing Pipeline**
 
-This repository serves as a collection of code, scripts, and notes for DTI processing, constituting a pipeline that can take an MRI DICOM  all the way to beautifully denoised pre-processed DTI images (and beyond). 
+This repository serves as a collection of code, scripts, and notes for DTI processing, constituting a pipeline that can take an dMRI DICOM  all the way to beautifully pre-processed DTI images (and beyond). 
 
 ![](Picture1.svg)
 
