@@ -33,7 +33,7 @@ The tool requires the following inputs:
     - Adjust `atlas_paths` and `mni_path` within the notebook to point to your atlas files and the MNI space file.
 
     Example:
-    \```python
+    \```bash
     atlas_paths = {
         'network': 'path/to/network/atlas.nii',
         'visual': 'path/to/visual/atlas.nii',
@@ -46,7 +46,7 @@ The tool requires the following inputs:
     - Update `patient_folders` with the paths to the directories containing patient data.
 
     Example:
-    \```python
+    \```bash
     patient_folders = [
         'path/to/patient1',
         'path/to/patient2',
