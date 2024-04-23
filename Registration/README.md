@@ -4,8 +4,8 @@
 This Jupyter Notebook is designed to facilitate the registration of MRI patient data to brain atlases and the MNI space.
 
 ## Features
-- **Selective Atlas** Registration: Dynamically choose which atlas (network, visual, motor) to register based on user settings.
-- **MNI** Space Alignment: Aligns patient scans with MNI standard space.
+- **Multiple Atlas Registration**: Dynamically choose which atlas (network, visual, motor) to register based on user settings.
+- **MNI Space Alignment**: Aligns patient scans with MNI standard space.
 
 ## Requirements
 - Python 3.6 or newer
@@ -13,7 +13,9 @@ This Jupyter Notebook is designed to facilitate the registration of MRI patient 
 - MIRTK: Must be installed and configured in the system's PATH.
 - Python Libraries: tqdm, os, subprocess.
 
-```pip install tqm os subprocess```
+```bash
+pip install tqm os subprocess
+```
 
 ## Inputs
 The tool requires the following inputs:
@@ -24,8 +26,31 @@ The tool requires the following inputs:
 
 ## Configuration
 
-In the notebook:
 
-- Adjust `atlas_paths` and `mni_path` to the locations of your atlas and MNI files.
-- Configure 'patient_folders' with paths to the patient data directories.
+### Set Up Paths and Data
+
+1. **Atlas and MNI Paths**:
+    - Adjust `atlas_paths` and `mni_path` within the notebook to point to your atlas files and the MNI space file.
+
+    Example:
+    \```python
+    atlas_paths = {
+        'network': 'path/to/network/atlas.nii',
+        'visual': 'path/to/visual/atlas.nii',
+        'motor': 'path/to/motor/atlas.nii'
+    }
+    mni_path = 'path/to/mni_space.nii'
+    \```
+
+2. **Patient Data**:
+    - Update `patient_folders` with the paths to the directories containing patient data.
+
+    Example:
+    \```python
+    patient_folders = [
+        'path/to/patient1',
+        'path/to/patient2',
+        'path/to/patient3'
+    ]
+    \```
 
