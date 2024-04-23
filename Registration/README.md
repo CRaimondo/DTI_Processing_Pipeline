@@ -4,14 +4,16 @@
 This Jupyter Notebook is designed to facilitate the registration of MRI patient data to brain atlases and the MNI space.
 
 ## Features
-Selective Atlas Registration: Dynamically choose which atlas (network, visual, motor) to register based on user settings.
-MNI Space Alignment: Aligns patient scans with MNI standard space.
+- **Selective Atlas** Registration: Dynamically choose which atlas (network, visual, motor) to register based on user settings.
+- **MNI** Space Alignment: Aligns patient scans with MNI standard space.
 
 ## Requirements
-Python 3.6 or newer
-Jupyter Notebook
-MIRTK: Must be installed and configured in the system's PATH.
-Python Libraries: tqdm, os, subprocess.
+- Python 3.6 or newer
+- Jupyter Notebook
+- MIRTK: Must be installed and configured in the system's PATH.
+- Python Libraries: tqdm, os, subprocess.
+
+```pip install tqm os subprocess```
 
 ## Inputs
 The tool requires the following inputs:
@@ -24,6 +26,6 @@ The tool requires the following inputs:
 
 In the notebook:
 
-- Adjust 'atlas_paths' and 'mni_path' to the locations of your atlas and MNI files.
+- Adjust `atlas_paths` and `mni_path` to the locations of your atlas and MNI files.
 - Configure 'patient_folders' with paths to the patient data directories.
 
