@@ -26,31 +26,31 @@ The tool requires the following inputs:
 
 ## Configuration
 
-
 ### Set Up Paths and Data
 
 1. **Atlas and MNI Paths**:
     - Adjust `atlas_paths` and `mni_path` within the notebook to point to your atlas files and the MNI space file.
 
     Example:
-    \```bash
+    ```python
     atlas_paths = {
         'network': 'path/to/network/atlas.nii',
         'visual': 'path/to/visual/atlas.nii',
         'motor': 'path/to/motor/atlas.nii'
     }
     mni_path = 'path/to/mni_space.nii'
-    \```
+    ```
 
 2. **Patient Data**:
     - Update `patient_folders` with the paths to the directories containing patient data.
 
     Example:
-    \```bash
+    ```python
     patient_folders = [
         'path/to/patient1',
         'path/to/patient2',
         'path/to/patient3'
     ]
-    \```
+    ```
+
 
