@@ -2,12 +2,14 @@
 
 %this script is set up to work from one folder containing pt folders
 %pt folders each contain a dti_outputs folder, script iterates through each
-%pt's dti_outputs and runs MAP processing on each one
+%pt's dti_outputs and runs MAP processing on each one, placing output files in the same dti_outputs folder
 
 %IMPORTANT:
+%the necessary inputs for this script are b0, mask, bval, and bvec files
 %make sure the b0 file is in .nii format otherwise mrconvert it
 %make sure bvec and bval files are also in dti_outputs folder
 %scroll to bottom of this script and specify original folder
+
 %specify how many pt folders there are immediately below
 for i = 1:8
         
