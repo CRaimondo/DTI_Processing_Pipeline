@@ -15,3 +15,12 @@ This repository serves as a collection of code, scripts, and notes for DTI proce
 ### (2) MIRTK Registration 
 - Run from command line
 
+### (3) MAP Processing
+- For MAP processing of DTI outputs
+- Run fron Matlab in your base path directory.
+- Required Starting Files in each dti_outputs folder: bval.bval, bvec.bvec, b0.nii, mask.nii
+
+### (4) Tractography
+- For whole brain tractography of DTI outputs
+- Run from Jupyter Notebook and change base path directory to your own.
+- Required Starting Files: denoise.nii, mask.nii, b0.nii
